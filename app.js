@@ -16,7 +16,7 @@ function start() {
         const random = rand(1,25)
         const div =document.createElement('div')
         div.classList.add('circle')
-        div.style = `background: radial-gradient(circle at 15px 15px, rgb(${randomColor1},${randomColor2},${randomColor3}), #000)`;
+        div.style = `background: radial-gradient(circle at ${1.4}vw ${1.4}vw, rgb(${randomColor1},${randomColor2},${randomColor3}), #000)`;
         if(randomColor1+randomColor2+randomColor3<500)
         div.style.color = "white"
         if(rutuliukai.includes(random)){
