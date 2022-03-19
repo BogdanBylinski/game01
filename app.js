@@ -9,9 +9,9 @@ let rutuliukai = []
 function start() {
     
     while (rutuliukai.length<25) {
-        let randomColor2 = rand(1,255);
-        let randomColor3 = rand(1,255);
-        let randomColor1 = rand(1,255);
+        let randomColor2 = rand(0,255);
+        let randomColor3 = rand(0,255);
+        let randomColor1 = rand(0,255);
         const random = rand(1,25)
         const div =document.createElement('div')
         div.classList.add('circle')
