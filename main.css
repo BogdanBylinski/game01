@@ -7,7 +7,7 @@ body * {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 main{
-    width: 1000px;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -16,8 +16,8 @@ main{
     transform: translate(-50%, -50%);
 }
 #first, #second {
-    width: 400px;
-    height: 400px;
+    width: 40%;
+    aspect-ratio: 1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(5, 1fr);
@@ -26,16 +26,19 @@ main{
     align-content: center;
 }
 .circle{
+    width: 80%;
+    height: 80%;  
     display: flex;
     justify-content: center;
     align-self: center;
     border-radius: 50%;
-    line-height: 50px;
-    margin-left: calc(50%  - 25px);
-  height: 50px;
-  width: 50px;
-  /* background: radial-gradient(circle at 15px 15px, #5cabff, #000); */
+    font-size: 2vw;
+    /* line-height: 50px; */
+    /* vertical-align: middle; */
+    margin-left: calc(50%  - 40%);
+/* background: radial-gradient(circle at 15px 15px, #5cabff, #000); */
   text-align: center;
+  align-items: center;
   cursor: pointer;
   -webkit-touch-callout: none; 
   -webkit-user-select: none; 
@@ -47,6 +50,6 @@ main{
 #second .circle{
     cursor: unset;
 }
-#reset {
+/* #reset {
    
-}
+} */
