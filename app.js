@@ -5,6 +5,7 @@ function rand(min, max) {
 }
 const first = document.querySelector('#first');
 const second = document.querySelector('#second');
+const win = document.querySelector('#winMSG')
 let rutuliukai = []
 function start() {
     
@@ -31,9 +32,14 @@ function start() {
     }
     const rutuliukai2 = [...rutuliukai]
     rutuliukai2.sort((a, b )=> a - b);
+    // window.addEventListener('click', (event) => {
+    //     console.log(event.button)
+    //     if(rutuliukai2.length === 0){
+    //         console.log(`done`);
+    //     }
+    //   })
     console.log(rutuliukai2);
     const visi = document.querySelectorAll('.circle');
-    
     
     visi.forEach(el=>{
         el.addEventListener('click',(e)=>{
@@ -42,27 +48,37 @@ function start() {
                 second.appendChild(el)
                 rutuliukai2.shift([0])
                 console.log(rutuliukai2);
+                if(rutuliukai2.length === 0){
+                    win.innerHTML = 'You Win !!!'
+                    console.log(`done`);
+                }
+                
             }
+            })
         })
-    })
-    const visi2 = document.querySelectorAll('#second .circle')
-    visi2.forEach(el =>{
-        
-        el.removeEventListener
-        console.log(visi2);
+        const visi2 = document.querySelectorAll('#second .circle')
+        visi2.forEach(el =>{
+            
+            el.removeEventListener
+            console.log(visi2);
+        //     if(visi2.length === 25){
+        //     console.log(`done`);
+        // }
     })
 }
+start();
+function reset() {
+    first.innerHTML=('');
+    second.innerHTML=('');
+    win.innerHTML=('');
+
+    rutuliukai= []
+    console.log(rutuliukai);
     start()
-    function reset() {
-        first.innerHTML=('');
-        second.innerHTML=('');
-        rutuliukai= []
-        console.log(rutuliukai);
-        start()
-        
-    }
-    const resetas = document.querySelector('#reset');
-    console.log(resetas);
-    resetas.addEventListener('click', ()=>{
-        reset()
-    })
+    
+}
+const resetas = document.querySelector('#reset');
+console.log(resetas);
+resetas.addEventListener('click', ()=>{
+    reset()
+})
