@@ -21,6 +21,8 @@ main{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 #button {
     width: 100%;
@@ -68,11 +70,14 @@ main{
 /* #reset {
    
 } */
-@media (max-width: 900px){
+@media (max-width: 400px){
     #first, #second {
         flex-direction: row;
         flex-wrap: wrap;
-        width: 48%;
+        width: 100%;
+    }
+    #second{
+        margin-top: 20px;
     }
 }
 #winMSG{
